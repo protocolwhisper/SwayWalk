@@ -1,10 +1,10 @@
 contract;
 
 storage {
-    counter : u64 = 0,
+    counter: u64 = 0,
 }
 abi Counter {
-    #[storage(read , write)] // Here's where we can define how to interact with the contracts 
+    #[storage(read, write)] // Here's where we can define how to interact with the contracts 
     fn increment();
 
     #[storage(read)]
@@ -17,7 +17,7 @@ impl Counter for Contract {
         return storage.counter;
     }
 
-    #[storage(read , write)]
+    #[storage(read, write)]
     fn increment() {
         storage.counter = storage.counter + 1;
     }
